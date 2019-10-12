@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 .header {
@@ -103,33 +103,41 @@ section:nth-of-type(1) p {
 }
 
 section:nth-of-type(2) {
-  background: #fff;
-  color: #333;
+  background-color: #fff;
   height: 100%;
+}
+
+section:nth-of-type(2) h3 {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+section:nth-of-type(2) h3:hover {
+  -webkit-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+  text-shadow: 0 0 2px #444343;
+}
+
+section:nth-of-type(2) a {
+  font-family: "Calibri Light";
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+section:nth-of-type(2) p {
+  font-family: "Calibri";
+  font-size: 16px;
+  color: #000;
 }
 
 section:nth-of-type(3) {
-  background: #af1581;
+  background: #2048a3;
   height: 100%;
-}
-
-section:nth-of-type(4) {
-  background: #333;
-  height: 100%;
-}
-
-section:nth-of-type(4) img {
-  height: 50%;
-  width: 50%;
-  padding-left: 25%;
-}
-
-section:nth-of-type(4) a {
-  color: #666666;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
 }
 
 section h3 {
@@ -140,10 +148,50 @@ section p {
   font-size: 1.2em;
 }
 
+footer {
+  padding: 7em;
+  background: #333;
+  height: 100%;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  font-size: 18px;
+  padding-top: 5%;
+  color: #b1b1b1;
+}
+
+footer ul li:nth-of-type(1) {
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fff;
+}
+
+footer ul li a {
+  -webkit-text-decoration-color: #666666;
+          text-decoration-color: #666666;
+  color: #fff;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+footer ul li a:hover {
+  color: #b1b1b1;
+}
+
 .card_news {
-  width: 100%;
+  width: 75%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.card_news img {
+  width: 100%;
+  height: 100%;
 }
 
 .card_news:hover {
@@ -174,18 +222,19 @@ section p {
 
 .card .image i {
   width: 100%;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   color: black;
   text-align: center;
   padding-top: 10%;
 }
 
 .card .image h2 {
+  padding: 10px;
   color: black;
   font-size: 50px;
   text-align: center;
-  font-family: 'Segoe UI Light';
+  font-family: "Segoe UI Light";
 }
 
 .card .image:hover {
@@ -202,8 +251,8 @@ section p {
   /*100%*/
   height: 100%;
   background: #ffc107;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   -webkit-transform-origin: left;
           transform-origin: left;
   -webkit-transform: perspective(2000px) rotateY(-90deg);
@@ -262,9 +311,18 @@ section p {
 }
 
 @media screen and (max-width: 800px) {
+  section {
+    width: 100%;
+  }
   .show-menu-btn,
   .hide-menu-btn {
     display: block;
+  }
+  .column {
+    width: 100%;
+  }
+  .card_news {
+    width: 100%;
   }
   .menu {
     position: fixed;
