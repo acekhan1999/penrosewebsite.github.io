@@ -84,30 +84,38 @@ section {
   color: white;
 }
 
-section:nth-of-type(1) {
+section h3 {
+  font-size: 3em;
+}
+
+section p {
+  font-size: 1.2em;
+}
+
+.section_about {
   background-image: url(https://d39l2hkdp2esp1.cloudfront.net/img/photo/165747/165747_00_2x.jpg?20190220080816);
   background-size: cover;
   opacity: 0.8;
   height: 100%;
 }
 
-section:nth-of-type(1) h3 {
+.section_about h3 {
   padding-top: 10%;
   text-align: center;
   text-shadow: 0 0 10px #333;
 }
 
-section:nth-of-type(1) p {
+.section_about p {
   text-align: center;
   text-shadow: 0 0 10px #333;
 }
 
-section:nth-of-type(2) {
+.section_news {
   background-color: #fff;
   height: 100%;
 }
 
-section:nth-of-type(2) h3 {
+.section_news h3 {
   font-size: 40px;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -116,36 +124,133 @@ section:nth-of-type(2) h3 {
   transition: 0.4s;
 }
 
-section:nth-of-type(2) h3:hover {
+.section_news h3:hover {
   -webkit-transform: skewX(-20deg);
           transform: skewX(-20deg);
   text-shadow: 0 0 2px #444343;
 }
 
-section:nth-of-type(2) a {
+.section_news a {
   font-family: "Calibri Light";
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
 }
 
-section:nth-of-type(2) p {
+.section_news p {
   font-family: "Calibri";
   font-size: 16px;
   color: #000;
 }
 
-section:nth-of-type(3) {
+.section_functionalities {
   background: #2048a3;
   height: 100%;
 }
 
-section h3 {
-  font-size: 3em;
+.courses_intro {
+  background-image: url(https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+  background-size: cover;
+  height: 100%;
 }
 
-section p {
-  font-size: 1.2em;
+.courses_intro h3 {
+  padding-top: 10%;
+  text-shadow: 0 0 10px #333;
+}
+
+.courses_intro p {
+  text-shadow: 0 0 10px #333;
+}
+
+.courses_enrolled {
+  height: 100%;
+}
+
+.courses_enrolled h3 {
+  font-size: 38px;
+  font-family: 'Segoe UI Light';
+  letter-spacing: 1px;
+  color: #4d4b4b;
+}
+
+.courses_enrolled p {
+  font-size: 18px;
+  font-family: 'Segoe UI';
+  color: #000;
+}
+
+.pagination {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.pagination ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 10px 18px;
+  text-decoration: none;
+  background: #2048a2;
+  color: #fff;
+}
+
+.pagination a:hover {
+  background: #faaa36;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 50px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding-top: 5%;
+}
+
+.grid img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.grid > article {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.grid > article:hover {
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+}
+
+.text {
+  padding: 0 20px 20px;
+}
+
+.text > button {
+  background: #2048a3;
+  border: 0;
+  color: #fff;
+  letter-spacing: 1px;
+  padding: 10px;
+  width: 100%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.text > button:hover {
+  background: #faaa36;
+}
+
+.enrolled {
+  padding-top: 5%;
 }
 
 footer {
@@ -312,6 +417,9 @@ footer ul li a:hover {
 
 @media screen and (max-width: 800px) {
   section {
+    width: 100%;
+  }
+  footer {
     width: 100%;
   }
   .show-menu-btn,
